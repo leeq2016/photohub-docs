@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoHub 技术支持</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            border-radius: 18px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+        .tagline {
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        h2 {
+            font-size: 18px;
+            color: #2d5a27;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section p {
+            color: #555;
+            margin: 10px 0;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: #f8f9f8;
+            border-radius: 8px;
+            margin: 8px 0;
+        }
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            fill: #4CAF50;
+        }
+        a {
+            color: #2d5a27;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .faq-item {
+            margin: 15px 0;
+        }
+        .faq-item strong {
+            color: #333;
+        }
+        .faq-item p {
+            color: #666;
+            font-size: 14px;
+        }
+        footer {
+            margin-top: 40px;
+            color: #999;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 24 24">
+                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+            </svg>
+        </div>
+
+        <h1>PhotoHub</h1>
+        <p class="tagline">相册热力图 · Photo Heatmap</p>
+
+        <div class="section">
+            <h2>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#4CAF50"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                联系我们
+            </h2>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <div>
+                    <strong>邮箱</strong><br>
+                    <a href="mailto:support@photohub.app">support@photohub.app</a>
+                </div>
+            </div>
+            <p style="color: #888; font-size: 14px; margin-top: 15px;">
+                我们会在 1-3 个工作日内回复您的邮件。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#4CAF50"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+                常见问题
+            </h2>
+            <div class="faq-item">
+                <strong>Q: PhotoHub 会收集我的照片数据吗？</strong>
+                <p>A: 不会。PhotoHub 100% 本地运行，所有数据处理都在您的设备上完成，不会上传任何数据。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q: 为什么需要相册访问权限？</strong>
+                <p>A: PhotoHub 需要读取照片的日期信息来生成热力图，并显示照片缩略图供您浏览。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q: 删除的照片可以恢复吗？</strong>
+                <p>A: 可以。删除的照片会移至系统「最近删除」相册，您可以在30天内恢复。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q: 支持 iPhone 和 iPad 吗？</strong>
+                <p>A: 是的，PhotoHub 同时支持 iPhone 和 iPad 设备。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#4CAF50"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                隐私保护
+            </h2>
+            <p>PhotoHub 承诺保护您的隐私：</p>
+            <ul style="margin-left: 20px; color: #555;">
+                <li>不收集任何个人数据</li>
+                <li>不使用第三方分析工具</li>
+                <li>不包含任何广告</li>
+                <li>所有数据本地处理</li>
+            </ul>
+            <p style="margin-top: 15px;">
+                <a href="privacy.html">查看完整隐私政策 →</a>
+            </p>
+        </div>
+
+        <footer>
+            <p>© 2026 PhotoHub. All rights reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="privacy.html">隐私政策</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
