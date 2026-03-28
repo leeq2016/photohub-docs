@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoHub 小红书宣传图</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            width: 375px;
+            height: 667px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        /* 封面图 - 粉色少女风 */
+        .card-1 {
+            background: linear-gradient(135deg, #FFE5EC 0%, #FFF0F5 50%, #E8F5E9 100%);
+        }
+
+        .card-1 .content {
+            padding: 40px 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card-1 .icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.3);
+        }
+
+        .card-1 .icon span {
+            font-size: 60px;
+        }
+
+        .card-1 h1 {
+            font-size: 36px;
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .card-1 .tagline {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .card-1 .feature-tag {
+            background: linear-gradient(135deg, #FF6B9D, #FF8E53);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+        }
+
+        .card-1 .stars {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+        }
+
+        /* 功能介绍 - 清新风 */
+        .card-2 {
+            background: linear-gradient(180deg, #E8F5E9 0%, #FFFFFF 100%);
+        }
+
+        .card-2 .header {
+            background: linear-gradient(135deg, #4CAF50, #66BB6A);
+            padding: 25px 30px;
+            color: white;
+        }
+
+        .card-2 .header h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .card-2 .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .card-2 .features {
+            padding: 25px 30px;
+        }
+
+        .card-2 .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .card-2 .feature-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #81C784, #A5D6A7);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .card-2 .feature-text h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .card-2 .feature-text p {
+            font-size: 13px;
+            color: #888;
+            line-height: 1.4;
+        }
+
+        /* 灭霸功能 - 炸裂风 */
+        .card-3 {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .card-3 .content {
+            padding: 40px 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .card-3 .snap-icon {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #9C27B0, #E91E63);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            box-shadow: 0 0 60px rgba(156, 39, 176, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 60px rgba(156, 39, 176, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 0 80px rgba(233, 30, 99, 0.6); }
+        }
+
+        .card-3 .snap-icon span {
+            font-size: 70px;
+        }
+
+        .card-3 h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #E91E63, #FF9800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-3 .desc {
+            font-size: 16px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .card-3 .highlight {
+            background: linear-gradient(90deg, #9C27B0, #E91E63);
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /* 隐私保护 - 简约风 */
+        .card-4 {
+            background: #FAFAFA;
+        }
+
+        .card-4 .content {
+            padding: 40px 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-4 .top {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card-4 .shield {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 50px;
+        }
+
+        .card-4 h2 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-4 .subtitle {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .card-4 .points {
+            flex: 1;
+        }
+
+        .card-4 .point {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .card-4 .point-icon {
+            width: 35px;
+            height: 35px;
+            background: #E8F5E9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .card-4 .point-text {
+            font-size: 15px;
+            color: #333;
+        }
+
+        .card-4 .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .card-4 .download-btn {
+            background: linear-gradient(135deg, #4CAF50, #66BB6A);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+        }
+
+        /* 下载引导 */
+        .card-5 {
+            background: linear-gradient(180deg, #4CAF50 0%, #2E7D32 100%);
+        }
+
+        .card-5 .content {
+            padding: 40px 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .card-5 .app-icon {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .card-5 .app-icon span {
+            font-size: 60px;
+        }
+
+        .card-5 h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .card-5 .price {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .card-5 .store-badge {
+            background: white;
+            color: #333;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-5 .store-badge span {
+            font-size: 24px;
+        }
+
+        .card-5 .contact {
+            margin-top: 30px;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        /* 标签 */
+        .tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.9);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .emoji {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 封面图 -->
+<div class="card card-1">
+    <span class="tag">📸 相册管理神器</span>
+    <span class="stars">✨</span>
+    <div class="content">
+        <div class="icon">
+            <span>📷</span>
+        </div>
+        <h1>PhotoHub</h1>
+        <p class="tagline">用 GitHub 风格热力图<br>回顾你的照片记忆</p>
+        <div class="feature-tag">🔥 灭霸响指 一键清理一半照片</div>
+    </div>
+</div>
+
+<!-- 功能介绍 -->
+<div class="card card-2">
+    <div class="tag">💡 核心功能</div>
+    <div class="header">
+        <h2>一张图看懂你的拍照习惯</h2>
+        <p>像 GitHub 贡献图一样展示你的照片记录</p>
+    </div>
+    <div class="features">
+        <div class="feature-item">
+            <div class="feature-icon">📅</div>
+            <div class="feature-text">
+                <h3>日历热力图</h3>
+                <p>一目了然看到哪天拍了多少照片</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">📊</div>
+            <div class="feature-text">
+                <h3>年度统计</h3>
+                <p>最忙月份、日均照片数全掌握</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">👆</div>
+            <div class="feature-text">
+                <h3>按日期浏览</h3>
+                <p>点击任意日期查看当天所有照片</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-text">
+                <h3>7种主题配色</h3>
+                <p>选择你喜欢的颜色风格</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 灭霸功能 -->
+<div class="card card-3">
+    <div class="tag" style="background: rgba(255,255,255,0.2); color: white;">🌟 独家功能</div>
+    <div class="content">
+        <div class="snap-icon">
+            <span>🫰</span>
+        </div>
+        <h2>灭霸响指</h2>
+        <p class="desc">面对几万张照片不知道删什么？<br>一键随机选中一半，让响指来决定！</p>
+        <div class="highlight">随机选中 ½ 照片</div>
+    </div>
+</div>
+
+<!-- 隐私保护 -->
+<div class="card card-4">
+    <div class="tag">🔒 安全放心</div>
+    <div class="content">
+        <div class="top">
+            <div class="shield">🛡️</div>
+            <h2>你的照片只属于你</h2>
+            <p class="subtitle">纯本地处理，零数据收集</p>
+        </div>
+        <div class="points">
+            <div class="point">
+                <div class="point-icon">❌</div>
+                <div class="point-text">不收集任何个人数据</div>
+            </div>
+            <div class="point">
+                <div class="point-icon">❌</div>
+                <div class="point-text">不上传照片到任何服务器</div>
+            </div>
+            <div class="point">
+                <div class="point-icon">❌</div>
+                <div class="point-text">不包含任何广告或追踪</div>
+            </div>
+            <div class="point">
+                <div class="point-icon">❌</div>
+                <div class="point-text">不需要网络连接</div>
+            </div>
+        </div>
+        <div class="cta">
+            <div class="download-btn">立即免费下载</div>
+        </div>
+    </div>
+</div>
+
+<!-- 下载引导 -->
+<div class="card card-5">
+    <div class="content">
+        <div class="app-icon">
+            <span>📷</span>
+        </div>
+        <h2>PhotoHub Heatmap</h2>
+        <p class="price">免费下载 · 新用户1个月免费试用</p>
+        <div class="store-badge">
+            <span>🍎</span>
+            App Store 下载
+        </div>
+        <p class="contact">
+            反馈建议：bingdoumi@163.com<br>
+            QQ：361066751
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
