@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhotoHub 小红书宣传图 v1.1.0</title>
+    <title>PhotoHub Social Promo Cards v1.1.0</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Noto Sans SC', 'PingFang SC', -apple-system, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #f0f0f0;
             display: flex;
             flex-wrap: wrap;
@@ -19,7 +19,6 @@
             padding: 24px;
         }
 
-        /* 小红书标准比例 3:4 */
         .card {
             width: 540px;
             height: 720px;
@@ -30,7 +29,7 @@
             flex-shrink: 0;
         }
 
-        /* ========== 卡片1：封面 ========== */
+        /* ========== Card 1: Cover ========== */
         .card-cover {
             background: linear-gradient(160deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             display: flex;
@@ -98,7 +97,7 @@
             font-weight: 500;
         }
 
-        /* ========== 卡片2：热力图+主题 ========== */
+        /* ========== Card 2: Heatmap ========== */
         .card-heatmap {
             background: linear-gradient(160deg, #ffecd2 0%, #fcb69f 100%);
             display: flex;
@@ -134,7 +133,6 @@
             display: block;
         }
 
-        /* 标注气泡 */
         .annotation {
             position: absolute;
             background: rgba(255,255,255,0.95);
@@ -170,13 +168,7 @@
             justify-content: center;
         }
 
-        .annotation.ann-top { top: -36px; left: 50%; transform: translateX(-50%); }
-        .annotation.ann-top::after { bottom: -4px; left: 50%; margin-left: -4px; }
-
-        .annotation.ann-bottom { bottom: -36px; left: 50%; transform: translateX(-50%); }
-        .annotation.ann-bottom::after { top: -4px; left: 50%; margin-left: -4px; }
-
-        /* ========== 卡片3：个性化报告 ========== */
+        /* ========== Card 3: Reports ========== */
         .card-report {
             background: linear-gradient(160deg, #a8edea 0%, #fed6e3 100%);
             display: flex;
@@ -251,7 +243,7 @@
             font-weight: 600;
         }
 
-        /* ========== 卡片4：新功能 ========== */
+        /* ========== Card 4: New Features ========== */
         .card-features {
             background: linear-gradient(160deg, #1a1a2e 0%, #2d1b69 50%, #5b2c8e 100%);
             padding: 30px 36px;
@@ -340,7 +332,7 @@
             padding: 10px;
         }
 
-        /* ========== 卡片5：CTA ========== */
+        /* ========== Card 5: CTA ========== */
         .card-cta {
             background: linear-gradient(160deg, #43e97b 0%, #38f9d7 100%);
             display: flex;
@@ -415,7 +407,7 @@
             opacity: 0.7;
         }
 
-        /* ========== 卡片6：灭霸响指 ========== */
+        /* ========== Card 6: Snap ========== */
         .card-snap {
             background: linear-gradient(160deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             display: flex;
@@ -472,7 +464,7 @@
             letter-spacing: 1px;
         }
 
-        /* ========== 卡片7：主题 ========== */
+        /* ========== Card 7: Themes ========== */
         .card-themes {
             background: linear-gradient(160deg, #fdfcfb 0%, #e2d1c3 100%);
             display: flex;
@@ -537,129 +529,129 @@
 </head>
 <body>
 
-<!-- 卡片1：封面 — 年度报告 -->
+<!-- Card 1: Cover — Annual Report -->
 <div class="card card-cover">
-    <div class="cover-badge">📸 2025 年度拍照报告</div>
+    <div class="cover-badge">📸 Your 2025 Photo Report</div>
     <div class="phone-wrap">
-        <img src="年度总结卡片.png" alt="年度拍照报告">
+        <img src="year_.png" alt="Annual Photo Report">
     </div>
     <h1>PhotoHub</h1>
-    <p class="subtitle">用热力图回顾你的照片记忆</p>
+    <p class="subtitle">Visualize Your Photo Journey</p>
     <div class="tags">
-        <span class="tag-pill">🔥 年度拍照报告</span>
-        <span class="tag-pill">📊 月度洞察卡片</span>
-        <span class="tag-pill">🫰 灭霸响指</span>
+        <span class="tag-pill">🔥 Annual Reports</span>
+        <span class="tag-pill">📊 Monthly Insights</span>
+        <span class="tag-pill">🫰 Thanos Snap</span>
     </div>
 </div>
 
-<!-- 卡片2：热力图+主题 -->
+<!-- Card 2: Heatmap + Themes -->
 <div class="card card-heatmap">
-    <h2 class="card-title">🎨 一眼看懂你的拍照习惯</h2>
-    <p class="card-desc">GitHub 风格热力图 · 11 种精美主题</p>
+    <h2 class="card-title">🎨 See Your Photo Habits at a Glance</h2>
+    <p class="card-desc">GitHub-style heatmap · 11 gorgeous themes</p>
     <div class="phone-container">
-        <div class="annotation ann-left">🟢 颜色越深 = 照片越多</div>
+        <div class="annotation ann-left">🟢 Darker = More Photos</div>
         <div class="phone-frame">
-            <img src="蜜桃主题主页.png" alt="热力图">
+            <img src="peach_theme_main_page.png" alt="Photo Heatmap">
         </div>
-        <div class="annotation ann-right">🌸 蜜桃主题<br>翡翠 · 靛蓝 · 日落</div>
+        <div class="annotation ann-right">🌸 Peach Theme<br>Jade · Indigo · Sunset</div>
     </div>
 </div>
 
-<!-- 卡片3：个性化报告 -->
+<!-- Card 3: Reports -->
 <div class="card card-report">
-    <h2 class="card-title">✨ 你的专属拍照报告</h2>
-    <p class="card-desc">年度 + 月度 · 一键分享朋友圈</p>
+    <h2 class="card-title">✨ Your Personalized Photo Reports</h2>
+    <p class="card-desc">Annual + Monthly · Share anywhere</p>
     <div class="dual-phone">
         <div class="phone-wrap">
-            <img src="年度总结卡片.png" alt="年度报告">
-            <div class="phone-label">📅 年度报告</div>
+            <img src="year_.png" alt="Annual Report">
+            <div class="phone-label">📅 Annual Report</div>
         </div>
         <div class="phone-wrap">
-            <img src="月度卡片.png" alt="月度报告">
-            <div class="phone-label">📆 月度报告</div>
+            <img src="month_.png" alt="Monthly Report">
+            <div class="phone-label">📆 Monthly Report</div>
         </div>
     </div>
     <div class="report-features">
-        <span class="report-tag">🌙 夜猫子型摄影师</span>
-        <span class="report-tag">🔥 最长连续天数</span>
-        <span class="report-tag">📈 同比变化</span>
-        <span class="report-tag">🏆 最忙碌的一天</span>
+        <span class="report-tag">🌙 Night Owl Photographer</span>
+        <span class="report-tag">🔥 Longest Streak</span>
+        <span class="report-tag">📈 Year-over-Year</span>
+        <span class="report-tag">🏆 Busiest Day</span>
     </div>
 </div>
 
-<!-- 卡片4：新功能 -->
+<!-- Card 4: New Features -->
 <div class="card card-features">
     <div class="card-header">
-        <h2>🆕 v1.1.0 全新功能 <span class="pro-tag-inline">PRO</span></h2>
-        <p>更多玩法，让你的照片日历更好看</p>
+        <h2>🆕 What's New in v1.1.0 <span class="pro-tag-inline">PRO</span></h2>
+        <p>Make your photo calendar come alive</p>
     </div>
     <div class="feat-grid">
         <div class="feat-item">
             <div class="feat-icon">🔖</div>
-            <h3>日期标记</h3>
-            <p>8种形状标记生日、旅行、纪念日</p>
+            <h3>Day Markers</h3>
+            <p>8 unique shapes for birthdays, trips, milestones</p>
             <span class="pro-tag">PRO</span>
         </div>
         <div class="feat-item screenshot-item">
             <div class="phone-mini">
-                <img src="日期标记菜单.png" alt="日期标记">
+                <img src="day_marker_list.png" alt="Day Markers">
             </div>
         </div>
         <div class="feat-item screenshot-item">
             <div class="phone-mini">
-                <img src="翡翠色主页.png" alt="峰值动画">
+                <img src="jade_theme_main_page.png" alt="Peak Animations">
             </div>
         </div>
         <div class="feat-item">
             <div class="feat-icon">💫</div>
-            <h3>峰值动画</h3>
-            <p>最忙碌的日子呼吸脉动高亮</p>
+            <h3>Peak Animations</h3>
+            <p>Busiest days pulse with breathing glow</p>
             <span class="pro-tag">PRO</span>
         </div>
     </div>
 </div>
 
-<!-- 卡片5：灭霸响指 -->
+<!-- Card 5: Snap -->
 <div class="card card-snap">
     <div class="snap-circle">🫰</div>
-    <h2>灭霸响指</h2>
-    <p class="desc">面对几万张照片不知道删什么？<br>一键随机选中一半，让响指来决定！</p>
-    <div class="snap-btn">⚡ 随机选中 ½ 照片</div>
+    <h2>Thanos Snap</h2>
+    <p class="desc">Can't decide what to delete?<br>One tap randomly selects half your photos!</p>
+    <div class="snap-btn">⚡ Randomly Select ½</div>
 </div>
 
-<!-- 卡片6：主题 -->
+<!-- Card 6: Themes -->
 <div class="card card-themes">
-    <h2 class="card-title">🎨 11种精美主题</h2>
-    <p class="card-desc">包含4种3D光影高级主题 <span class="pro-tag-inline">PRO</span></p>
+    <h2 class="card-title">🎨 11 Stunning Themes</h2>
+    <p class="card-desc">Including 4 premium 3D light &amp; shadow themes <span class="pro-tag-inline">PRO</span></p>
     <div class="phone-wrap">
-        <img src="11种主题选择.png" alt="11种主题">
+        <img src="eleven_theme_choose.png" alt="11 Themes">
     </div>
     <div class="theme-pills">
-        <span class="theme-pill" style="background:#4CAF50;">经典绿</span>
-        <span class="theme-pill" style="background:#2196F3;">海洋蓝</span>
-        <span class="theme-pill" style="background:#FF7043;">日落橙</span>
-        <span class="theme-pill" style="background:#9C27B0;">薰衣草</span>
-        <span class="theme-pill" style="background:#E91E63;">蜜桃粉</span>
-        <span class="theme-pill" style="background:#00897B;">翡翠绿</span>
+        <span class="theme-pill" style="background:#4CAF50;">Classic</span>
+        <span class="theme-pill" style="background:#2196F3;">Ocean</span>
+        <span class="theme-pill" style="background:#FF7043;">Sunset</span>
+        <span class="theme-pill" style="background:#9C27B0;">Lavender</span>
+        <span class="theme-pill" style="background:#E91E63;">Peach</span>
+        <span class="theme-pill" style="background:#00897B;">Jade</span>
     </div>
 </div>
 
-<!-- 卡片7：CTA -->
+<!-- Card 7: CTA -->
 <div class="card card-cta">
     <div class="app-icon">
         <img src="logo.png" alt="PhotoHub">
     </div>
     <h2>PhotoHub Heatmap</h2>
-    <p class="price-text">免费下载 · 新用户1个月免费试用</p>
+    <p class="price-text">Free Download · 1-Month Free Trial</p>
     <div class="store-btn">
-        🍎 App Store 下载
+        🍎 Download on App Store
     </div>
     <div class="privacy-badges">
-        <span class="privacy-badge">🔒 不收集数据</span>
-        <span class="privacy-badge">📡 无需网络</span>
-        <span class="privacy-badge">🚫 无广告</span>
+        <span class="privacy-badge">🔒 No Data Collection</span>
+        <span class="privacy-badge">📡 Works Offline</span>
+        <span class="privacy-badge">🚫 No Ads</span>
     </div>
-    <p class="contact">反馈建议：bingdoumi@163.com</p>
+    <p class="contact">Feedback: bingdoumi@163.com</p>
 </div>
 
 </body>
