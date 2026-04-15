@@ -196,6 +196,48 @@
         .phone-frame.crop-bottom img { object-position: bottom; }
         .phone-frame.crop-center img { object-position: center; }
 
+        /* Tall Phone Frame — full-height screenshots */
+        .tall-phone-frame {
+            width: 180px;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15), inset 0 0 0 2px rgba(0,0,0,0.06);
+            background: #000;
+        }
+        .tall-phone-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Dual phones side-by-side */
+        .dual-phones {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        /* Pro Badge */
+        .pro-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            background: linear-gradient(135deg, #FFD700, #FFA000);
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 10px;
+            margin-left: 10px;
+            vertical-align: middle;
+            letter-spacing: 0.5px;
+        }
+        .pro-badge svg {
+            width: 12px;
+            height: 12px;
+            fill: white;
+        }
+
         /* Circular icon fallback (for stats) */
         .feature-icon-box {
             width: 240px;
@@ -310,6 +352,8 @@
             }
             .feature.reverse { direction: ltr; }
             .phone-frame { width: 180px; height: 310px; border-radius: 26px; }
+            .tall-phone-frame { width: 150px; }
+            .dual-phones { gap: 10px; }
             .feature-icon-box { width: 160px; height: 160px; }
             .feature-icon-box svg { width: 56px; height: 56px; }
             .feature-text h3 { font-size: 22px; }
@@ -323,6 +367,7 @@
             .hero-icon { width: 90px; height: 90px; border-radius: 22px; }
             .cta-button { padding: 14px 28px; font-size: 16px; }
             .phone-frame { width: 160px; height: 276px; border-radius: 22px; }
+            .tall-phone-frame { width: 130px; }
         }
     </style>
 </head>
@@ -352,11 +397,11 @@
     <h2>Everything You Need to Reclaim Your Storage</h2>
     <p class="features-subtitle">Powerful tools to see, select, and clean your photo library.</p>
 
-    <!-- Feature 1: Photo Heatmap — show top half -->
+    <!-- Feature 1: Photo Heatmap -->
     <section class="feature f-heatmap" id="heatmap">
         <div class="feature-icon-wrap">
             <div class="phone-frame crop-top">
-                <img src="1.png" alt="Photo Heatmap">
+                <img src="peach_theme_main_page.png" alt="Photo Heatmap">
             </div>
         </div>
         <div class="feature-text">
@@ -408,31 +453,64 @@
         </div>
     </section>
 
-    <!-- Feature 5: Annual Stats — keep SVG (no dedicated screenshot) -->
+    <!-- Feature 5: Personalized Reports -->
     <section class="feature f-stats" id="stats">
         <div class="feature-icon-wrap">
-            <div class="feature-icon-box">
-                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            <div class="dual-phones">
+                <div class="tall-phone-frame">
+                    <img src="year_.png" alt="Annual Report Card">
+                </div>
+                <div class="tall-phone-frame">
+                    <img src="month_.png" alt="Monthly Report Card">
+                </div>
             </div>
         </div>
         <div class="feature-text">
-            <h3>Annual Stats</h3>
-            <p>Beautiful data visualizations of your photo habits. See your busiest month, daily averages, total counts, and trends — a yearly photo report card.</p>
-            <span class="pain-tag">Solves: "I want to understand my photo habits, not just browse photos"</span>
+            <h3>Personalized Photo Reports</h3>
+            <p>Beautiful data visualizations of your photo habits — busiest month, daily averages, longest streak, and your "photographer personality". Generate stunning annual and monthly report cards with real heatmap visuals, then share them on social media.</p>
+            <span class="pain-tag">Solves: "I want to understand my photo habits and share my year in photos"</span>
         </div>
     </section>
 
-    <!-- Feature 6: Colorful Themes — show bottom -->
+    <!-- Feature 6: Themes -->
     <section class="feature f-themes reverse" id="themes">
         <div class="feature-icon-wrap">
-            <div class="phone-frame crop-bottom">
-                <img src="theme_choose.png" alt="Colorful Themes">
+            <div class="tall-phone-frame">
+                <img src="eleven_theme_choose.png" alt="11 Themes">
             </div>
         </div>
         <div class="feature-text">
-            <h3>7 Colorful Themes</h3>
-            <p>Make it yours. Choose from 7 hand-crafted color themes for your heatmap — from classic green to ocean blue to rose pink. Your photos, your style.</p>
+            <h3>11 Stunning Themes <span class="pro-badge"><svg viewBox="0 0 24 24"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5z"/></svg> PRO</span></h3>
+            <p>Make it yours. Choose from 11 hand-crafted color themes — including 4 premium themes with immersive 3D light &amp; shadow effects. From classic green to ocean blue to jade and peach. Your photos, your style.</p>
             <span class="pain-tag">Solves: "I want my photo tool to look as good as my photos"</span>
+        </div>
+    </section>
+
+    <!-- Feature 7: Day Markers -->
+    <section class="feature f-markers" id="markers">
+        <div class="feature-icon-wrap">
+            <div class="tall-phone-frame">
+                <img src="day_marker_list.png" alt="Day Markers">
+            </div>
+        </div>
+        <div class="feature-text">
+            <h3>Day Markers <span class="pro-badge"><svg viewBox="0 0 24 24"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5z"/></svg> PRO</span></h3>
+            <p>Mark the moments that matter. Use 8 unique shapes — heart, star, camera, and more — to highlight birthdays, trips, milestones, or any day worth remembering right on your heatmap.</p>
+            <span class="pain-tag">Solves: "I want to remember which days were special, not just which had the most photos"</span>
+        </div>
+    </section>
+
+    <!-- Feature 8: Peak Animations -->
+    <section class="feature f-peak reverse" id="peak">
+        <div class="feature-icon-wrap">
+            <div class="phone-frame crop-top">
+                <img src="jade_theme_main_page.png" alt="Peak Animations with Jade Theme">
+            </div>
+        </div>
+        <div class="feature-text">
+            <h3>Peak Day Animations <span class="pro-badge"><svg viewBox="0 0 24 24"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5z"/></svg> PRO</span></h3>
+            <p>Your busiest photo days deserve to stand out. The highest-activity days pulse with a gentle breathing animation — a living heatmap that tells your story at a glance. Combined with premium themes, your calendar comes alive.</p>
+            <span class="pain-tag">Solves: "I want to instantly spot my most memorable days on the calendar"</span>
         </div>
     </section>
 </div>

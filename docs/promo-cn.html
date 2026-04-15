@@ -196,6 +196,48 @@
         .phone-frame.crop-bottom img { object-position: bottom; }
         .phone-frame.crop-center img { object-position: center; }
 
+        /* Tall Phone Frame — full-height screenshots */
+        .tall-phone-frame {
+            width: 180px;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15), inset 0 0 0 2px rgba(0,0,0,0.06);
+            background: #000;
+        }
+        .tall-phone-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Dual phones side-by-side */
+        .dual-phones {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        /* Pro Badge */
+        .pro-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            background: linear-gradient(135deg, #FFD700, #FFA000);
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 10px;
+            margin-left: 10px;
+            vertical-align: middle;
+            letter-spacing: 0.5px;
+        }
+        .pro-badge svg {
+            width: 12px;
+            height: 12px;
+            fill: white;
+        }
+
         /* Circular icon fallback (for stats) */
         .feature-icon-box {
             width: 240px;
@@ -310,6 +352,8 @@
             }
             .feature.reverse { direction: ltr; }
             .phone-frame { width: 180px; height: 310px; border-radius: 26px; }
+            .tall-phone-frame { width: 150px; }
+            .dual-phones { gap: 10px; }
             .feature-icon-box { width: 160px; height: 160px; }
             .feature-icon-box svg { width: 56px; height: 56px; }
             .feature-text h3 { font-size: 22px; }
@@ -323,6 +367,7 @@
             .hero-icon { width: 90px; height: 90px; border-radius: 22px; }
             .cta-button { padding: 14px 28px; font-size: 16px; }
             .phone-frame { width: 160px; height: 276px; border-radius: 22px; }
+            .tall-phone-frame { width: 130px; }
         }
     </style>
 </head>
@@ -352,11 +397,11 @@
     <h2>你需要的相册清理工具</h2>
     <p class="features-subtitle">强大功能，让你轻松看清、选择、清理照片。</p>
 
-    <!-- Feature 1: Photo Heatmap — show top half -->
+    <!-- Feature 1: Photo Heatmap -->
     <section class="feature f-heatmap" id="heatmap">
         <div class="feature-icon-wrap">
             <div class="phone-frame crop-top">
-                <img src="1.png" alt="照片热力图">
+                <img src="蜜桃主题主页.png" alt="照片热力图">
             </div>
         </div>
         <div class="feature-text">
@@ -408,31 +453,64 @@
         </div>
     </section>
 
-    <!-- Feature 5: Annual Stats — keep SVG (no dedicated screenshot) -->
+    <!-- Feature 5: Personalized Reports -->
     <section class="feature f-stats" id="stats">
         <div class="feature-icon-wrap">
-            <div class="feature-icon-box">
-                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            <div class="dual-phones">
+                <div class="tall-phone-frame">
+                    <img src="年度总结卡片.png" alt="年度报告卡片">
+                </div>
+                <div class="tall-phone-frame">
+                    <img src="月度卡片.png" alt="月度报告卡片">
+                </div>
             </div>
         </div>
         <div class="feature-text">
-            <h3>年度统计</h3>
-            <p>精美的数据可视化，展示你的拍照习惯。最忙的月份、日均照片数、总量和趋势——你的年度拍照报告。</p>
-            <span class="pain-tag">解决：「想了解自己的拍照习惯，而不只是浏览照片」</span>
+            <h3>个性化照片报告</h3>
+            <p>精美的数据可视化，展示你的拍照习惯——最忙碌的月份、日均照片数、最长连续天数、拍照人格标签。生成精美的年度和月度报告卡片，内置真实热力图，一键分享到社交媒体。</p>
+            <span class="pain-tag">解决：「想了解自己的拍照习惯，还想分享我的年度照片故事」</span>
         </div>
     </section>
 
-    <!-- Feature 6: Colorful Themes — show bottom -->
+    <!-- Feature 6: Themes -->
     <section class="feature f-themes reverse" id="themes">
         <div class="feature-icon-wrap">
-            <div class="phone-frame crop-bottom">
-                <img src="theme_choose.png" alt="缤纷主题">
+            <div class="tall-phone-frame">
+                <img src="11种主题选择.png" alt="11种主题">
             </div>
         </div>
         <div class="feature-text">
-            <h3>7 种缤纷主题</h3>
-            <p>打造你的专属风格。7 种精心设计的配色主题——从经典绿到海洋蓝到玫瑰粉。你的照片，你的风格。</p>
+            <h3>11 种精美主题 <span class="pro-badge"><svg viewBox="0 0 24 24"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5z"/></svg> PRO</span></h3>
+            <p>打造你的专属风格。11 种精心设计的配色主题——包含 4 种沉浸式 3D 光影效果的高级主题。从经典绿到海洋蓝到翡翠和蜜桃。你的照片，你的风格。</p>
             <span class="pain-tag">解决：「想让工具界面和照片一样好看」</span>
+        </div>
+    </section>
+
+    <!-- Feature 7: Day Markers -->
+    <section class="feature f-markers" id="markers">
+        <div class="feature-icon-wrap">
+            <div class="tall-phone-frame">
+                <img src="日期标记菜单.png" alt="日期标记">
+            </div>
+        </div>
+        <div class="feature-text">
+            <h3>日期标记 <span class="pro-badge"><svg viewBox="0 0 24 24"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5z"/></svg> PRO</span></h3>
+            <p>标记每一个重要时刻。8 种独特形状——爱心、星星、相机等——在热力图上高亮生日、旅行、里程碑或任何值得纪念的日子。</p>
+            <span class="pain-tag">解决：「想记住哪些日子是特别的，而不只是哪些天拍了最多照片」</span>
+        </div>
+    </section>
+
+    <!-- Feature 8: Peak Animations -->
+    <section class="feature f-peak reverse" id="peak">
+        <div class="feature-icon-wrap">
+            <div class="phone-frame crop-top">
+                <img src="翡翠色主页.png" alt="翡翠主题峰值动画">
+            </div>
+        </div>
+        <div class="feature-text">
+            <h3>峰值动画 <span class="pro-badge"><svg viewBox="0 0 24 24"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5z"/></svg> PRO</span></h3>
+            <p>最忙碌的日子值得被看见。拍照最多的日期会呈现柔和的呼吸脉动动画——一张活的热力图，一眼就能找到最难忘的日子。搭配高级主题，让你的日历充满生命力。</p>
+            <span class="pain-tag">解决：「想在日历上一眼找到最难忘的日子」</span>
         </div>
     </section>
 </div>
