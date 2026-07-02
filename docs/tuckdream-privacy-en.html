@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamJar Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 28px; margin-bottom: 10px; color: #1a1a1a; }
+        h2 { font-size: 20px; margin: 30px 0 15px; color: #8B3A3A; border-bottom: 2px solid #f4e4e4; padding-bottom: 8px; }
+        p { margin: 12px 0; }
+        .date { color: #666; font-size: 14px; margin-bottom: 30px; }
+        ul { margin: 15px 0; padding-left: 25px; }
+        li { margin: 8px 0; }
+        .highlight { background: #f4e4e4; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #f0f0f0; }
+        .logo { text-align: center; margin-bottom: 20px; }
+        .logo img { width: 80px; height: 80px; border-radius: 18px; }
+        .lang-switch { position: fixed; top: 20px; right: 20px; background: #8B3A3A; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 14px; z-index: 100; }
+        .lang-switch:hover { background: #a04545; }
+        footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; color: #888; font-size: 13px; text-align: center; }
+    </style>
+</head>
+<body>
+    <a href="tuckdream-privacy.html" class="lang-switch">中文</a>
+
+    <div class="container">
+        <div class="logo">
+            <img src="tuckdream-logo.png" alt="DreamJar">
+        </div>
+        <h1>DreamJar Privacy Policy</h1>
+        <p class="date">Last Updated: July 2, 2026</p>
+
+        <div class="highlight">
+            <strong>Core Commitment:</strong> DreamJar is a fully local app. Your dream content — text, voice recordings, and photos — is stored only on your device and never uploaded to any server.
+        </div>
+
+        <h2>1. Overview</h2>
+        <p>DreamJar ("the App") is a dream-recording app that lets you save your dreams as text or voice memos, decorate them with stickers and crystal/porcelain jar skins, and revisit them chronologically. This policy explains how we handle your information.</p>
+
+        <h2>2. Information Collection</h2>
+        <p><strong>This app does not collect any personal data.</strong></p>
+        <ul>
+            <li>No personal information collected</li>
+            <li>No dream text, voice recordings, or photos uploaded</li>
+            <li>No location data collected</li>
+            <li>No cookies or tracking technologies used</li>
+            <li>No data shared with third parties</li>
+            <li>No advertising or analytics SDKs</li>
+            <li>No account or login required</li>
+        </ul>
+
+        <h2>3. Data Access and Storage</h2>
+        <p>The App stores the following data on your device to provide its functionality:</p>
+        <table>
+            <tr>
+                <th>Data Type</th>
+                <th>Purpose</th>
+                <th>Storage</th>
+            </tr>
+            <tr>
+                <td>Dream text content (≤ 2000 characters per entry)</td>
+                <td>Display and search your dream entries</td>
+                <td>Local device only (SwiftData store)</td>
+            </tr>
+            <tr>
+                <td>Voice recordings (.m4a, up to 60 seconds each)</td>
+                <td>Play back voice dreams</td>
+                <td>Local device only (App sandbox)</td>
+            </tr>
+            <tr>
+                <td>Photos added to dreams (PNG, up to 3 per dream)</td>
+                <td>Attach memories to dream entries</td>
+                <td>Local device only (App sandbox)</td>
+            </tr>
+            <tr>
+                <td>Skin and sticker selections (string IDs)</td>
+                <td>Render jar appearance</td>
+                <td>Local device only (SwiftData store)</td>
+            </tr>
+            <tr>
+                <td>On-device speech recognition (optional)</td>
+                <td>Transcribe your voice into dream text</td>
+                <td>Processed locally on device; no audio leaves the device</td>
+            </tr>
+        </table>
+        <p><strong>All data processing happens locally on your device. Nothing is uploaded to any server.</strong></p>
+
+        <h2>4. System Permissions</h2>
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+                <th>Required?</th>
+            </tr>
+            <tr>
+                <td>Microphone</td>
+                <td>Record your voice when you choose to log a voice dream</td>
+                <td>Optional — only used when you tap the record button</td>
+            </tr>
+            <tr>
+                <td>Speech Recognition</td>
+                <td>Transcribe your spoken dream into text (iOS on-device recognizer)</td>
+                <td>Optional — only used when you choose voice-to-text</td>
+            </tr>
+            <tr>
+                <td>Photo Library (via PhotosPicker)</td>
+                <td>Add photos to your dream entries</td>
+                <td>Optional — only used when you tap the add-photo button</td>
+            </tr>
+        </table>
+        <p>Permissions are requested only at the moment you use the corresponding feature, and you can decline any of them without losing other App functionality.</p>
+
+        <h2>5. Third-Party Services</h2>
+        <p>This app does <strong>NOT</strong> use any third-party services, including:</p>
+        <ul>
+            <li>No analytics tools (e.g., Firebase, Google Analytics, Mixpanel)</li>
+            <li>No advertising networks</li>
+            <li>No social media SDKs</li>
+            <li>No cloud storage services</li>
+            <li>No crash reporting tools</li>
+        </ul>
+        <p>The only external interaction is with <strong>Apple's StoreKit</strong> for processing in-app purchases, which is handled by Apple directly. See Section 6.</p>
+
+        <h2>6. In-App Purchases</h2>
+        <p>DreamJar offers a one-time, non-consumable purchase ("Lifetime Full Version Unlock") that unlocks all jar skins (porcelain and certain crystal jars). Purchase processing and billing are handled entirely by Apple through your Apple ID.</p>
+        <ul>
+            <li>We do not collect, store, or transmit any payment information</li>
+            <li>Apple provides us only with the transaction result (purchased or not)</li>
+            <li>Purchase status is stored locally on your device via StoreKit and synced through your Apple ID</li>
+            <li>You can restore your purchase at any time via the "Restore Purchase" button in the App's About page</li>
+        </ul>
+
+        <h2>7. Data Retention and Deletion</h2>
+        <p>All your dream data lives only on your device:</p>
+        <ul>
+            <li>Delete a single dream: long-press the jar on the main screen and confirm deletion — this permanently removes the dream and its associated voice recording and photos</li>
+            <li>Delete all data: uninstall the App — iOS automatically removes all local data (text, voice, photos, settings)</li>
+        </ul>
+        <p>Because we do not have any of your data on our servers, we cannot retrieve, restore, or delete your data remotely — this is by design, for your privacy.</p>
+
+        <h2>8. Children's Privacy</h2>
+        <p>This App is not directed at children under 13 and does not knowingly collect any information from children. Since we collect no data at all, no special children's privacy protections are triggered.</p>
+
+        <h2>9. Your Rights (EU / GDPR / UK GDPR / CCPA)</h2>
+        <p>Because DreamJar does not collect or process any personal data, the data-rights provisions of GDPR (EU), UK GDPR, and CCPA do not produce any data for you to exercise. However, you have full control:</p>
+        <ul>
+            <li><strong>Right to access / portability:</strong> All your data is already on your device — you can review it any time within the App</li>
+            <li><strong>Right to erasure:</strong> Delete individual dreams in-App, or uninstall the App to remove everything</li>
+            <li><strong>Right to object / restrict:</strong> No processing occurs, so no objection is needed</li>
+            <li><strong>Right to lodge a complaint:</strong> You may contact your local data protection authority or email us</li>
+        </ul>
+
+        <h2>10. International Transfers</h2>
+        <p>No international transfers occur because no data leaves your device. The only network communication is with Apple's StoreKit servers for purchase verification, which is governed by Apple's own privacy policy.</p>
+
+        <h2>11. Security</h2>
+        <p>Your dream data is protected by iOS's built-in sandbox isolation. The App cannot access data from other apps, and other apps cannot access your dream data. We do not implement additional encryption because the OS-level sandbox is the strongest protection available on iOS.</p>
+
+        <h2>12. Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. Continued use of the App after changes indicates your acceptance.</p>
+
+        <h2>13. Contact Us</h2>
+        <p>If you have questions about this privacy policy or your data, please contact us:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:bingdoumi@163.com">bingdoumi@163.com</a></li>
+            <li><strong>Xiaohongshu (小红书) ID:</strong> 819661319</li>
+        </ul>
+        <p>For EU consumers, you may also contact us via email with the subject line "EU Privacy Inquiry" for priority handling.</p>
+
+        <footer>
+            <p>&copy; 2026 DreamJar. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

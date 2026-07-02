@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拾梦日记 隐私政策</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 28px; margin-bottom: 10px; color: #1a1a1a; }
+        h2 { font-size: 20px; margin: 30px 0 15px; color: #8B3A3A; border-bottom: 2px solid #f4e4e4; padding-bottom: 8px; }
+        p { margin: 12px 0; }
+        .date { color: #666; font-size: 14px; margin-bottom: 30px; }
+        ul { margin: 15px 0; padding-left: 25px; }
+        li { margin: 8px 0; }
+        .highlight { background: #f4e4e4; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #f0f0f0; }
+        .logo { text-align: center; margin-bottom: 20px; }
+        .logo img { width: 80px; height: 80px; border-radius: 18px; }
+        .lang-switch { position: fixed; top: 20px; right: 20px; background: #8B3A3A; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 14px; z-index: 100; }
+        .lang-switch:hover { background: #a04545; }
+        footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; color: #888; font-size: 13px; text-align: center; }
+        a { color: #8B3A3A; }
+    </style>
+</head>
+<body>
+    <a href="tuckdream-privacy-en.html" class="lang-switch">English</a>
+
+    <div class="container">
+        <div class="logo">
+            <img src="tuckdream-logo.png" alt="拾梦日记">
+        </div>
+        <h1>拾梦日记 隐私政策</h1>
+        <p class="date">最后更新：2026 年 7 月 2 日</p>
+
+        <div class="highlight">
+            <strong>核心承诺：</strong>拾梦日记是一款完全本地化的 App。你的梦内容（文字、语音、照片）只存储在你自己的设备上，绝不会上传到任何服务器。
+        </div>
+
+        <h2>一、概述</h2>
+        <p>拾梦日记（以下简称"本 App"）是一款梦记录 App，让你把梦以文字或语音的形式保存下来，配上贴纸、水晶罐或瓷器罐皮肤，按月份归档，随时回看。本政策说明我们如何处理你的信息。</p>
+
+        <h2>二、信息收集</h2>
+        <p><strong>本 App 不收集任何个人数据。</strong></p>
+        <ul>
+            <li>不收集任何个人身份信息</li>
+            <li>不上传你的梦文字、语音、照片</li>
+            <li>不收集位置信息</li>
+            <li>不使用 Cookie 或任何追踪技术</li>
+            <li>不与任何第三方分享数据</li>
+            <li>不含广告或分析 SDK</li>
+            <li>不需要账号或登录</li>
+        </ul>
+
+        <h2>三、数据访问与存储</h2>
+        <p>本 App 在你的设备上存储以下数据以提供功能：</p>
+        <table>
+            <tr>
+                <th>数据类型</th>
+                <th>用途</th>
+                <th>存储位置</th>
+            </tr>
+            <tr>
+                <td>梦文字内容（每条 ≤ 2000 字）</td>
+                <td>展示和检索你的梦</td>
+                <td>仅本地（SwiftData 存储）</td>
+            </tr>
+            <tr>
+                <td>语音录音（.m4a，每条最长 60 秒）</td>
+                <td>播放语音梦</td>
+                <td>仅本地（App 沙盒）</td>
+            </tr>
+            <tr>
+                <td>添加到梦里的照片（PNG，每条最多 3 张）</td>
+                <td>为梦附上记忆</td>
+                <td>仅本地（App 沙盒）</td>
+            </tr>
+            <tr>
+                <td>皮肤和贴纸选择（字符串 ID）</td>
+                <td>渲染罐子外观</td>
+                <td>仅本地（SwiftData 存储）</td>
+            </tr>
+            <tr>
+                <td>本地语音识别（可选）</td>
+                <td>把口述的梦转成文字</td>
+                <td>设备本地处理，音频不离开设备</td>
+            </tr>
+        </table>
+        <p><strong>所有数据处理都在你的设备本地完成，不上传到任何服务器。</strong></p>
+
+        <h2>四、系统权限</h2>
+        <table>
+            <tr>
+                <th>权限</th>
+                <th>用途</th>
+                <th>是否必需</th>
+            </tr>
+            <tr>
+                <td>麦克风</td>
+                <td>当你选择录制语音梦时录音</td>
+                <td>可选 — 只在你点击录音按钮时请求</td>
+            </tr>
+            <tr>
+                <td>语音识别</td>
+                <td>把口述的梦转成文字（iOS 设备端识别器）</td>
+                <td>可选 — 只在你选择语音转文字时请求</td>
+            </tr>
+            <tr>
+                <td>照片库（通过 PhotosPicker）</td>
+                <td>给梦添加照片</td>
+                <td>可选 — 只在你点击添加照片按钮时请求</td>
+            </tr>
+        </table>
+        <p>权限仅在你要使用对应功能的那一刻才请求，你可以拒绝任何一项而不影响其他功能。</p>
+
+        <h2>五、第三方服务</h2>
+        <p>本 App <strong>不使用</strong>任何第三方服务，包括：</p>
+        <ul>
+            <li>不含分析工具（如 Firebase、Google Analytics、Mixpanel）</li>
+            <li>不含广告网络</li>
+            <li>不含社交媒体 SDK</li>
+            <li>不含云存储服务</li>
+            <li>不含崩溃上报工具</li>
+        </ul>
+        <p>唯一的外部交互是 <strong>Apple 的 StoreKit</strong>，用于处理 App 内购买，全程由 Apple 直接处理。详见第六节。</p>
+
+        <h2>六、App 内购买</h2>
+        <p>拾梦日记提供一次性、非消耗型购买（"永久完整版解锁"），解锁全部罐子皮肤（瓷器罐和部分水晶罐）。购买流程和账单完全由 Apple 通过你的 Apple ID 处理。</p>
+        <ul>
+            <li>我们不收集、存储或传输任何支付信息</li>
+            <li>Apple 只把交易结果（是否已购买）返回给我们</li>
+            <li>购买状态通过 StoreKit 本地保存，并通过你的 Apple ID 同步</li>
+            <li>你可以随时通过 App 内"关于"页面的"恢复购买"按钮重新解锁</li>
+        </ul>
+
+        <h2>七、数据保留与删除</h2>
+        <p>你的所有梦数据都只存在于你的设备上：</p>
+        <ul>
+            <li>删除单条梦：在主界面长按罐子并确认删除 — 这会永久删除该梦及其关联的语音录音和照片</li>
+            <li>删除所有数据：卸载 App — iOS 会自动清除所有本地数据（文字、语音、照片、设置）</li>
+        </ul>
+        <p>因为我们的服务器上没有你的任何数据，我们无法远程检索、恢复或删除你的数据 — 这是出于隐私保护的设计。</p>
+
+        <h2>八、儿童隐私</h2>
+        <p>本 App 不针对 13 岁以下儿童，也不有意收集儿童信息。由于我们不收集任何数据，不触发儿童隐私特别保护条款。</p>
+
+        <h2>九、你的权利（欧盟 / GDPR / 英国 GDPR / CCPA）</h2>
+        <p>由于拾梦日记不收集或处理任何个人数据，GDPR（欧盟）、英国 GDPR、CCPA 等数据权利条款在你身上不会产生可执行的数据。但你拥有完全控制权：</p>
+        <ul>
+            <li><strong>访问 / 可携带权：</strong>所有数据已经在你设备上 — 你随时可在 App 内查看</li>
+            <li><strong>删除权：</strong>在 App 内删除单条梦，或卸载 App 一次性删除全部</li>
+            <li><strong>反对 / 限制处理权：</strong>不发生处理，无需反对</li>
+            <li><strong>投诉权：</strong>你可以向当地数据保护机构投诉，或直接邮件联系我们</li>
+        </ul>
+
+        <h2>十、跨境传输</h2>
+        <p>不发生跨境传输，因为没有数据离开你的设备。唯一的网络通信是与 Apple 的 StoreKit 服务器验证购买，该过程受 Apple 自身的隐私政策约束。</p>
+
+        <h2>十一、安全性</h2>
+        <p>你的梦数据由 iOS 内置的沙盒隔离保护。本 App 不能访问其他 App 的数据，其他 App 也不能访问你的梦数据。我们没有额外加密，因为操作系统级沙盒是 iOS 上最强的保护。</p>
+
+        <h2>十二、政策变更</h2>
+        <p>我们可能不时更新本隐私政策。任何变更会发布在本页面并更新"最后更新"日期。变更后继续使用 App 即视为接受。</p>
+
+        <h2>十三、联系我们</h2>
+        <p>如果你对本隐私政策或你的数据有疑问，请联系我们：</p>
+        <ul>
+            <li><strong>邮箱：</strong><a href="mailto:bingdoumi@163.com">bingdoumi@163.com</a></li>
+            <li><strong>小红书 ID：</strong>819661319</li>
+        </ul>
+        <p>欧盟用户可在邮件标题中加上"EU Privacy Inquiry"，我们会优先处理。</p>
+
+        <footer>
+            <p>&copy; 2026 拾梦日记。保留所有权利。</p>
+        </footer>
+    </div>
+</body>
+</html>
